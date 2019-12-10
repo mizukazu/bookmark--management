@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+/*
+ レイアウト用CSS
+
+ Auther: Mizukazu
+*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 10px;
+  padding-right: 10px; 
+}

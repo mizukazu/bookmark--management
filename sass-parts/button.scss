@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.btn-partial-line {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  border-bottom: solid 3px #ffc489;
+  border-left: solid 3px #ffc489;
+  color: #ffc489;
+  transition: .4s;
+}
+
+.btn-partial-line:hover {
+  padding-left: 0.7em;
+  padding-right: 0.3em;
+}

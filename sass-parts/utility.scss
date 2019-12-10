@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+/*
+ 汎用CSS
+ このスタイルにはよく使うスタイルを記載してあります。
+
+ Auther: Mizukazu
+*/
+
+/*
+  見出し
+*/
+h2 {
+  position: relative;
+  padding: 0.25em 0;
+}
+h2:after {
+  content: "";
+  display: block;
+  height: 4px;
+  background: -webkit-linear-gradient(to right, rgb(230, 90, 90), transparent);
+  background: linear-gradient(to right, rgb(230, 90, 90), transparent);
+}
+
+/*
+  ボタン
+*/
+.btn-partial-line {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  border-bottom: solid 3px #ffc489;
+  border-left: solid 3px #ffc489;
+  color: #ffc489;
+  transition: .4s;
+}
+
+.btn-partial-line:hover {
+  padding-left: 0.7em;
+  padding-right: 0.3em;
+}

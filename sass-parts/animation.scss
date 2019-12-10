@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/*
+ アニメーション用CSS
+
+ Auther: Mizukazu
+*/
+
+// 下からフェードイン
+.fadeIn {
+ opacity: 0;
+ transform: translateY(50px);
+ transition: 2s; 
+}
+
+.scrollIn {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+// 右から左へスライドするアニメーション
+@keyframes RightToLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+// 左から右へスライドするアニメーション
+@keyframes LeftToRight {
+  0% {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

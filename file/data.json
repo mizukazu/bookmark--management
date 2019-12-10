@@ -1,0 +1,87 @@
+[
+    {
+        "name": "Drawer公式サイト",
+        "url": "http:\/\/git.blivesta.com\/drawer\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【jQuery】スライダープラグイン「slick」の使い方を詳しく解説",
+        "url": "https:\/\/webdesignday.jp\/inspiration\/technique\/jquery-js\/3847\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "手軽に画像をパララックスエフェクト「simpleParallax」",
+        "url": "https:\/\/sakic.jp\/blog\/web\/simpleparallax",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【JS】「simpleParallax.js」で簡単にパララックス効果を与える",
+        "url": "https:\/\/www.webtan.cc\/wp\/htmlcssjquery-%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0\/%e3%80%90js%e3%80%91%e3%80%8csimpleparallax-js%e3%80%8d%e3%81%a7%e7%b0%a1%e5%8d%98%e3%81%ab%e3%83%91%e3%83%a9%e3%83%a9%e3%83%83%e3%82%af%e3%82%b9%e5%8a%b9%e6%9e%9c%e3%82%92%e4%b8%8e%e3%81%88%e3%82%8b\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "jQuery非依存で手軽にパララックス「Rellax.js」",
+        "url": "https:\/\/sakic.jp\/blog\/web\/rellax",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【PHP】連想配列、配列への追加(Qiita)",
+        "url": "https:\/\/qiita.com\/kazu56\/items\/6947a0e4830eb556d575",
+        "tag": "PHP"
+    },
+    {
+        "name": "Font Awesome",
+        "url": "https:\/\/fontawesome.com\/",
+        "tag": "その他"
+    },
+    {
+        "name": "【PHP】フォームバリデーションのライブラリなら、Valitronが便利です",
+        "url": "https:\/\/manablog.org\/php-valitron\/",
+        "tag": "PHP"
+    },
+    {
+        "name": "【PHP】複数の配列を同時にwhileで回す",
+        "url": "https:\/\/qiita.com\/KOH_TA\/items\/c69b0fce9da1b114fef9",
+        "tag": "PHP"
+    },
+    {
+        "name": "【jQuery】クリックで状態が切り替わるボタンを実装する【初心者向け】",
+        "url": "https:\/\/macoblog.com\/jquery_click_active\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【PHP】file_get_contents関数を使うときのエラー処理の方法",
+        "url": "https:\/\/ysklog.net\/php\/2370.html",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP で URL パラメーターから値を取得する方法",
+        "url": "https:\/\/hirashimatakumi.com\/blog\/311.html",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP ヒアドキュメントの使いかた",
+        "url": "https:\/\/qiita.com\/39_isao\/items\/8987fd62cf0e50c3be39",
+        "tag": "PHP"
+    },
+    {
+        "name": "Thought is free",
+        "url": "https:\/\/thk.kanzae.net\/",
+        "tag": "BLOG"
+    },
+    {
+        "name": "【css】要素をposition:absoluteで中央に配置する最新の方法(上下左右、上下、左右)",
+        "url": "https:\/\/arts-factory.net\/position\/",
+        "tag": "CSS"
+    },
+    {
+        "name": "CSSのposition: absoluteとrelativeとは",
+        "url": "https:\/\/uxmilk.jp\/63409",
+        "tag": "CSS"
+    },
+    {
+        "name": "☘️だいたい楽しい☘️",
+        "url": "https:\/\/soramugi.wordpress.com\/",
+        "tag": "BLOG"
+    }
+]

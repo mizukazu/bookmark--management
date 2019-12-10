@@ -1,0 +1,26 @@
+[
+  {
+    "tag": "HTML",
+    "src": "<i class='fab fa-html5 fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "CSS",
+    "src": "<i class='fab fa-css3-alt fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "JavaScript",
+    "src": "<i class='fab fa-js-square fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "PHP",
+    "src": "<i class='fab fa-php fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "BLOG",
+    "src": "<i class='fas fa-blog fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "その他",
+    "src": "<i class='far fa-circle fa-2x text-gray-300'></i>"
+  }
+]

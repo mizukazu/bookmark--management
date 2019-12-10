@@ -1,0 +1,28 @@
+@charset "UTF-8";
+/* css読み込み */
+.m-row {
+  margin: 0; }
+
+.m-header-nav {
+  min-height: 100vh;
+  height: 100vh;
+  display: flex;
+  flex-direction: column; }
+  .m-header-nav .brand-logo {
+    position: relative;
+    font-size: 1.3em;
+    font-weight: 700; }
+  .m-header-nav ul {
+    display: flex;
+    flex-direction: column; }
+
+.medium {
+  font-size: 50px !important; }
+
+/* 画面サイズが480pxまで */
+/* 画面サイズが480pxから600pxまで */
+/* 画面サイズが600pxから960pxまで */
+/* 画面サイズが960pxから1280pxまで */
+/* 画面サイズが1280pxから */
+
+/*# sourceMappingURL=style.css.map */
