@@ -5,23 +5,45 @@
 <?php require_once('./parts/sidebar.php'); ?> 
 <?php require_once('./parts/topbar.php'); ?> 
 <?php $url = './file/data.json'; ?>
-<?php $array = get_json($url); ?>  
 <?php
-/** 1ページに表示するデータの数量 */
-$per_page   = 10;
-/** データの総数 */
-$count      = count($array);
-/** 最大ページ */
-$total_page = ceil($count / $per_page);
+// データの取得
+$data = get_json($url);
 
-/** タグ */
-$tag;
-
+// ページ番号の取得
 if(!isset($_GET['page'])) {
   $now_page = 1;
 } else {
   $now_page = $_GET['page'];
 }
+
+// パラメータにタグが付いてればタグを変数に格納
+if(isset($_GET['tag'])) {
+
+  // データをタグでソート
+  $data = array_filter($data, function($d) {
+    return $d['tag'] === $_GET['tag'];
+  });
+
+  // 配列のインデックスを振り直す
+  $data = array_values($data);
+
+}
+?>  
+<?php
+/************************
+ * ページネーションの設定
+ ************************/
+
+/** 1ページに表示するデータの数量 */
+$per_page   = 10;
+/** データの総数 */
+$count      = count($data);
+/** 最大ページ */
+$total_page = ceil($count / $per_page);
+/** 始点 */
+$start = ($now_page - 1) * $per_page;
+/** 終点 */
+$end   = $now_page * $per_page;
 ?>
 
         <!-- Begin Page Content -->
@@ -45,64 +67,38 @@ if(!isset($_GET['page'])) {
                   <tbody>
                     <tr>
                       <?php
-                        // タグが存在する場合
-                        if(isset($_GET['tag'])) {
-                          $tag = $_GET['tag'];
-                          if(is_array($array)) {
-                            if($now_page === 1) {
-                              for($i=0; $i<=$per_page; $i++) {
-                                if($array[$i]['tag'] === $tag) {
-                                  echo '<tr>
-                                          <td><a href="'. $array[$i]['url'] .'">'. $array[$i]['name'] .'</a></td>
-                                          <td>'. $array[$i]['tag'] .'</td>
-                                        </tr>';
-                                }
-                              }
-                            } else {
-                              $start = ($now_page - 1) * $per_page;
-                              $end   = $now_page * $per_page;
-
-                              for($i=$start; $i<$end; $i++) {
-                                if(isset($array[$i])) {
-                                  if($array[$i]['tag'] === $tag) {
-                                    echo '<tr>
-                                            <td><a href="'. $array[$i]['url'] .'">'. $array[$i]['name'] .'</a></td>
-                                            <td>'. $array[$i]['tag'] .'</td>
-                                          </tr>';
-                                  }
-                                }
-                              }
+                      // データが存在している時の処理
+                      if(isset($data)) {
+                        // ページ番号が1の場合
+                        if($now_page === 1) {
+                          // データが最大表示数より小さい場合
+                          if($count < $per_page) {
+                            for($i=0; $i<$count; $i++) {
+                            echo '<tr>
+                                    <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                    <td>'. $data[$i]['tag'] .'</td>
+                                  </tr>';
                             }
                           } else {
-                            return;
+                            for($i=0; $i<=$per_page; $i++) {                     
+                              echo '<tr>
+                                      <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                      <td>'. $data[$i]['tag'] .'</td>
+                                    </tr>';
+                            }
                           }
-                        // タグが無い場合の処理
                         } else {
-                          if(is_array($array)) {
-                            if($now_page === 1) {
-                              for($i=0; $i<$per_page; $i++) {  
-                                echo '<tr>
-                                        <td><a href="'. $array[$i]['url'] .'">'. $array[$i]['name'] .'</a></td>
-                                        <td>'. $array[$i]['tag'] .'</td>
-                                      </tr>';
-                              }
-                            } else {
-                              $start = ($now_page - 1) * $per_page;
-                              $end   = $now_page * $per_page;
-
-                              for($i=$start; $i<$end; $i++) {
-                                if(isset($array[$i])) {
-                                  echo '<tr>
-                                          <td><a href="'. $array[$i]['url'] .'">'. $array[$i]['name'] .'</a></td>
-                                          <td>'. $array[$i]['tag'] .'</td>
-                                        </tr>';
-                                }
-                              }
-                            }
-                          } else {
-                            return;
+                          for($i=$start; $i<=$end; $i++) {                     
+                            echo '<tr>
+                                    <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                    <td>'. $data[$i]['tag'] .'</td>
+                                  </tr>';
                           }
-                        }                    
+                        }
+                      // データが無ければ何もしない
+                      } else {
+                        return;
+                      }                 
                       ?>
                     </tr>                  
                   </tbody>
@@ -123,23 +119,30 @@ if(!isset($_GET['page'])) {
                   }
                   
                   // ページネーションの表示
-                  // $pagination->paging();
-                  // for($i=1; $i<=$total_page; $i++) {
-                  //   echo '<li class="page-item"><a class="page-link" href="contents.php?tag='.$tag.'?page='.$i.'">'.$i.'</a></li>';
-                  // }
+                  // タグが存在する場合
+                  if(isset($tag)) {
+                    for($i=1; $i<=$total_page; $i++) {
+                      echo '<li class="page-item"><a class="page-link" href="contents.php?tag='.$tag.'?page='.$i.'">'.$i.'</a></li>';
+                    }
+                  // タグが存在しない場合
+                  } else {
+                    for($i=1; $i<=$total_page; $i++) {
+                      echo '<li class="page-item"><a class="page-link" href="contents.php?page='.$i.'">'.$i.'</a></li>';
+                    }
+                  }
 
                   if(isset($now_page)) {
                     if($now_page != $total_page) {
                       // 後矢印を表示する
                       echo '<li class="page-item">
-                            <a class="page-link" href=contents.php?page='.($now_page + 1). ' aria-label="次">
+                            <a class="page-link" href=contents.php?page='.($now_page + 1).' aria-label="次">
                               <span aria-hidden="true">&raquo;</span>
                             </a>
                           </li>';
                     }
                   } else {
                     echo '<li class="page-item">
-                            <a class="page-link" href=contents.php?page='.($now_page + 1). ' aria-label="次">
+                            <a class="page-link" href=contents.php?page='.($now_page + 1).' aria-label="次">
                               <span aria-hidden="true">&raquo;</span>
                             </a>
                           </li>';
@@ -147,7 +150,6 @@ if(!isset($_GET['page'])) {
 
                   echo   '</ul>';
                   echo  '</nav>';
-
                 ?>
               </div>
             </div>
