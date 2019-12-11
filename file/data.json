@@ -83,5 +83,50 @@
         "name": "☘️だいたい楽しい☘️",
         "url": "https:\/\/soramugi.wordpress.com\/",
         "tag": "BLOG"
+    },
+    {
+        "name": "VSCodeでのGitの基本操作まとめ",
+        "url": "https:\/\/qiita.com\/y-tsutsu\/items\/2ba96b16b220fb5913be",
+        "tag": "GITHUB"
+    },
+    {
+        "name": "【初心者向け】Gitのインストール方法をわかり易く解説（画面付き）",
+        "url": "https:\/\/eng-entrance.com\/git-install",
+        "tag": "GIT"
+    },
+    {
+        "name": "gitignoreの書き方チートシート【テンプレあり】",
+        "url": "https:\/\/wiseloan-cash.com\/gitignore\/",
+        "tag": "GIT"
+    },
+    {
+        "name": "VSCodeの機能で最低限必要なGit操作をしたい！",
+        "url": "https:\/\/qiita.com\/mnao305\/items\/b3c5f5943066a0bb8e2e",
+        "tag": "GIT"
+    },
+    {
+        "name": "PHPで配列操作を行う関数まとめ",
+        "url": "https:\/\/www.ritolab.com\/entry\/155",
+        "tag": "PHP"
+    },
+    {
+        "name": "phpのページングは難しくない!シンプルに覚えるサンプル付き解説",
+        "url": "https:\/\/www.sejuku.net\/blog\/70234",
+        "tag": "PHP"
+    },
+    {
+        "name": "クラスの基礎",
+        "url": "https:\/\/www.php.net\/manual\/ja\/language.oop5.basic.php",
+        "tag": "PHP"
+    },
+    {
+        "name": "[PHP] ページング機能の仕組みとか作り方とか",
+        "url": "https:\/\/tenderfeel.xsrv.jp\/php\/639\/[PHP] ページング機能の仕組みとか作り方とか",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP：配列の添え字番号を振り直す方法",
+        "url": "https:\/\/teratail.com\/questions\/4468",
+        "tag": "PHP"
     }
 ]
