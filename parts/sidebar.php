@@ -35,13 +35,10 @@
   </a>
   <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
-      <!-- <h6 class="collapse-header">Login Screens:</h6> -->
       <a class="collapse-item active" href="contents.php">WEB制作全般</a>
       <a class="collapse-item" href="contents.php?tag=HTML">HTML</a>
       <a class="collapse-item" href="contents.php?tag=CSS">CSS</a>
       <a class="collapse-item" href="contents.php?tag=JavaScript">JavaScript</a>
-      <!-- <div class="collapse-divider"></div> -->
-      <!-- <h6 class="collapse-header">Other Pages:</h6> -->
       <a class="collapse-item" href="contents.php?tag=PHP">PHP</a>
     </div>
   </div>
