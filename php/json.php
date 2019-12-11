@@ -41,10 +41,3 @@ function get_json($url) {
     }
   }
 }
-
-/**
- * JSONデータを書き込む関数
- */
-function write_json($data) {
-  
-}
