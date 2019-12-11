@@ -22,5 +22,13 @@
   {
     "tag": "その他",
     "src": "<i class='far fa-circle fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "GIT",
+    "src": "<i class='fab fa-git fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "GITHUB",
+    "src": "<i class='fab fa-github fa-2x text-gray-300'></i>"
   }
 ]
