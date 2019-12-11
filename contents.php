@@ -50,7 +50,15 @@ $end   = $now_page * $per_page;
         <div class="container-fluid">
 
           <!-- Page Heading -->
-          <h1 class="h3 mb-2 text-gray-800">WEB制作全般</h1>
+          <h1 class="h3 mb-2 text-gray-800">
+          <?php
+          if(isset($_GET['tag'])) {
+            echo $_GET['tag'];
+          } else {
+            echo 'WEB制作全般';
+          }
+          ?>
+          </h1>
           <!-- <p class="mb-4"></a></p> -->
 
           <!-- DataTales Example -->
