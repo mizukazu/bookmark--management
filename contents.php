@@ -80,19 +80,23 @@ $end   = $now_page * $per_page;
                                   </tr>';
                             }
                           } else {
-                            for($i=0; $i<=$per_page; $i++) {                     
+                            for($i=0; $i<$per_page; $i++) {                     
                               echo '<tr>
                                       <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
                                       <td>'. $data[$i]['tag'] .'</td>
                                     </tr>';
                             }
                           }
+                        // ページ番号が1以外の場合
                         } else {
-                          for($i=$start; $i<=$end; $i++) {                     
-                            echo '<tr>
-                                    <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
-                                    <td>'. $data[$i]['tag'] .'</td>
-                                  </tr>';
+                          for($i=$start; $i<=$end; $i++) {
+                            // データが空でない場合
+                            if(!empty($data[$i])) {                   
+                              echo '<tr>
+                                      <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                      <td>'. $data[$i]['tag'] .'</td>
+                                    </tr>';
+                            }
                           }
                         }
                       // データが無ければ何もしない
@@ -107,8 +111,16 @@ $end   = $now_page * $per_page;
                   // ページネーション
                   echo  '<nav class="area-label">';
                   echo   '<ul class="pagination justify-content-end">';
-                  if(isset($now_page)) {
-                    if($now_page != 1) {
+
+                  // 現在のページ番号が1以外の場合
+                  if($now_page != 1) {
+                    if(isset($_GET['tag'])) {
+                      echo '<li class="page-item">
+                              <a class="page-link" href=contents.php?tag='.$_GET['tag'].'&page='.($now_page - 1).' aria-label="前">
+                                <span aria-hidden="true">&laquo;</span>
+                              </a>
+                            </li>'; 
+                    } else {
                       // 前矢印を表示する
                       echo '<li class="page-item">
                               <a class="page-link" href=contents.php?page='.($now_page - 1).' aria-label="前">
@@ -117,12 +129,12 @@ $end   = $now_page * $per_page;
                             </li>'; 
                     }
                   }
-                  
+
                   // ページネーションの表示
                   // タグが存在する場合
-                  if(isset($tag)) {
+                  if(isset($_GET['tag'])) {
                     for($i=1; $i<=$total_page; $i++) {
-                      echo '<li class="page-item"><a class="page-link" href="contents.php?tag='.$tag.'?page='.$i.'">'.$i.'</a></li>';
+                      echo '<li class="page-item"><a class="page-link" href="contents.php?tag='.$_GET['tag'].'&page='.$i.'">'.$i.'</a></li>';
                     }
                   // タグが存在しない場合
                   } else {
@@ -131,8 +143,15 @@ $end   = $now_page * $per_page;
                     }
                   }
 
-                  if(isset($now_page)) {
-                    if($now_page != $total_page) {
+                  // 現在のページが最大表示ページ以外で、データの数が1ページに表示する項目数より多い場合
+                  if($now_page != $total_page && $count > $per_page) {
+                    if(isset($_GET['tag'])) {
+                      echo '<li class="page-item">
+                              <a class="page-link" href=contents.php?tag='.$_GET['tag'].'&page='.($now_page + 1).' aria-label="次">
+                                <span aria-hidden="true">&raquo;</span>
+                              </a>
+                            </li>';
+                    } else {
                       // 後矢印を表示する
                       echo '<li class="page-item">
                             <a class="page-link" href=contents.php?page='.($now_page + 1).' aria-label="次">
@@ -140,14 +159,7 @@ $end   = $now_page * $per_page;
                             </a>
                           </li>';
                     }
-                  } else {
-                    echo '<li class="page-item">
-                            <a class="page-link" href=contents.php?page='.($now_page + 1).' aria-label="次">
-                              <span aria-hidden="true">&raquo;</span>
-                            </a>
-                          </li>';
                   }
-
                   echo   '</ul>';
                   echo  '</nav>';
                 ?>
