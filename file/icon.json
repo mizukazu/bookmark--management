@@ -34,5 +34,9 @@
   {
     "tag": "Laravel",
     "src": "<i class='fab fa-laravel fa-2x text-gray-300'></i>"
+  },
+  {
+    "tag": "WordPress",
+    "src": "<i class='fab fa-wordpress fa-2x text-gray-300'></i>"
   }
 ]
