@@ -1,3 +1,11 @@
+<?php require_once('./php/json.php'); ?>
+<?php $url = './file/icon.json'; ?>
+<?php
+// データの取得
+$data = get_json($url);
+?>
+
+
 <!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -36,17 +44,20 @@
   <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
     <div class="bg-white py-2 collapse-inner rounded">
       <a class="collapse-item active" href="contents.php">WEB制作全般</a>
-      <a class="collapse-item" href="contents.php?tag=HTML">HTML</a>
-      <a class="collapse-item" href="contents.php?tag=CSS">CSS</a>
-      <a class="collapse-item" href="contents.php?tag=JavaScript">JavaScript</a>
-      <a class="collapse-item" href="contents.php?tag=PHP">PHP</a>
+      <?php
+      foreach($data as $d) {
+        if($d['tag'] != 'Blog' && $d['tag'] != 'その他') {
+          echo '<a class="collapse-item" href="contents.php?tag='.$d['tag'].'">'.$d['tag'].'</a>';
+        }
+      }
+      ?>
     </div>
   </div>
 </li>
 
 <!-- Nav Item - ブログ -->
 <li id="blog" class="nav-item">
-  <a class="nav-link" href="contents.php?tag=BLOG">
+  <a class="nav-link" href="contents.php?tag=Blog">
     <i class="fas fa-fw fa-folder"></i>
     <span>ブログ</span></a>
 </li>
