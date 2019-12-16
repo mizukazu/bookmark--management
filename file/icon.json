@@ -16,7 +16,7 @@
     "src": "<i class='fab fa-php fa-2x text-gray-300'></i>"
   },
   {
-    "tag": "BLOG",
+    "tag": "Blog",
     "src": "<i class='fas fa-blog fa-2x text-gray-300'></i>"
   },
   {
@@ -24,15 +24,15 @@
     "src": "<i class='far fa-circle fa-2x text-gray-300'></i>"
   },
   {
-    "tag": "GIT",
+    "tag": "Git",
     "src": "<i class='fab fa-git fa-2x text-gray-300'></i>"
   },
   {
-    "tag": "GITHUB",
+    "tag": "GitHub",
     "src": "<i class='fab fa-github fa-2x text-gray-300'></i>"
   },
   {
-    "tag": "LARAVEL",
+    "tag": "Laravel",
     "src": "<i class='fab fa-laravel fa-2x text-gray-300'></i>"
   }
 ]
