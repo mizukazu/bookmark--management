@@ -82,3 +82,7 @@ function create_tag_array($data) {
     }
     exit;
   }
+
+  function export() {
+    echo 'test!';
+  }
