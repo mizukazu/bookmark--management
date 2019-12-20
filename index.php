@@ -51,6 +51,7 @@
           </div>
         </div>
       </div>
+      <hr>
       <div class="row">
         <form class="col-lg-6" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
           <button id="import-btn" class="btn btn-primary col-lg-3 mb-2 import-modal" name="data" value="import">インポート</button>
@@ -76,7 +77,7 @@
       <hr>
       <form action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
         <input type="file">
-        <div class="mt-2" style="display:flex; justify-content:center;">
+        <div class="mt-3" style="display:flex; justify-content:center;">
           <button type="submit" class="btn btn-primary mr-1" name="data" value="import">インポート</button>
           <button type="button" class="btn btn-default ml-1 cancel">キャンセル</button>
         </div>
