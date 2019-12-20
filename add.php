@@ -32,10 +32,9 @@
       <input type="submit" class="col-sm-2 btn btn-primary btn-user btn-block" value="追加">
 
     </form>
+    <hr>
 
     <?php
-    // データの取得
-    // 作りかけ アイコンをクリックしたらタグに分類を入力する処理を作る
     $data = get_json($url);
     echo '<div class="col-lg-5" style="display:flex; justify-content:space-between;">';
     foreach($data as $d) {
@@ -43,6 +42,8 @@
     }
     echo '</div>';
     ?>
+
+    <div>タグアイコンをクリックするとタグ名を自動入力する事が出来ます。</div>
 
     <?php
       // エラーメッセージの出力 
