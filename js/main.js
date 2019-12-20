@@ -44,7 +44,7 @@ function classNameConverter(className) {
     case 'css3':
       return 'CSS'
     case 'js':
-      return 'Javascript';
+      return 'JavaScript';
     case 'php':
       return 'PHP';
     case 'blog':

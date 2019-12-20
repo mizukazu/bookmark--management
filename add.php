@@ -36,7 +36,7 @@
 
     <?php
     $data = get_json($url);
-    echo '<div class="col-lg-5" style="display:flex; justify-content:space-between;">';
+    echo '<div class="col-lg-5 mb-2" style="display:flex; justify-content:space-between;">';
     foreach($data as $d) {
       echo '<span class="icon">'.$d['src'].'</span>';
     }
