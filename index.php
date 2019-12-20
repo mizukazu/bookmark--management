@@ -50,7 +50,12 @@
             </div>
           </div>
         </div>
-        
+      </div>
+      <div class="row">
+        <form class="col-lg-6" action="" method="POST" style="display:flex; flex-direction:column;">
+          <button class="btn btn-primary col-lg-3 mb-2" name="import">インポート</button>
+          <button class="btn btn-primary col-lg-3" name="export">エクスポート</button>
+        </form>
       </div>
       <!-- /.row -->
     </div>
