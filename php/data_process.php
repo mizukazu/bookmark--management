@@ -1,22 +1,9 @@
+<?php require_once('functions.php'); ?>
+<?php $url = '../file/data.json'; ?>
 <?php
-if(isset($_POST)) {
-  $data_att = $_POST['data'];
+// データのダウンロード処理
+if(isset($_POST['data']) && $_POST['data'] === 'export') {
+  download($url);
+} else {
+  header('location: ../index.php');
 }
-switch($data_att) {
-  case 'import':
-    import();
-  break;
-  case 'export':
-    export();
-  break;
-  default:
-  return;
-}
-
-function import() {
-  echo 'import!';
-}
-function export() {
-  echo 'export!';
-}
-
