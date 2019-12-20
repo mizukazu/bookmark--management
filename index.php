@@ -53,8 +53,8 @@
       </div>
       <div class="row">
         <form class="col-lg-6" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
-          <button class="btn btn-primary col-lg-3 mb-2" name="data" value="import">インポート</button>
-          <button class="btn btn-primary col-lg-3" name="data" value="export">エクスポート</button>
+          <button id="import-btn" class="btn btn-primary col-lg-3 mb-2 import-modal" name="data" value="import">インポート</button>
+          <button id='export-btn' class="btn btn-primary col-lg-3 export-modal" name="data" value="export">エクスポート</button>
         </form>
       </div>
       <!-- /.row -->
@@ -66,3 +66,32 @@
 
     <!-- Footer -->
     <?php require_once('./parts/footer.php') ?>
+
+    <!-- インポート用のモーダル -->
+    <div id="import-modal" style="display:none;">
+      <p style="text-align:center;">
+        データのインポートを行います。<br>
+        指定のJSON形式のファイルを選択してください。
+      </p>
+      <hr>
+      <form action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
+        <input type="file">
+        <div class="mt-2" style="display:flex; justify-content:center;">
+          <button type="submit" class="btn btn-primary mr-1" name="data" value="import">インポート</button>
+          <button type="button" class="btn btn-default ml-1 cancel">キャンセル</button>
+        </div>
+      </form>
+    </div>
+
+    <!-- エクスポート用のモーダル -->
+    <div class="export-modal" id="export-modal" style="display:none;">
+      <p style="text-align:center;">
+        データのエクスポートを行います。<br>
+        よろしいですか？
+      </p>
+      <hr>
+      <form action="php/data_process.php" method="POST" style="display:flex; justify-content:center;">
+        <button type="submit" class="btn btn-primary mr-1" name="data" value="export">エクスポート</button>
+        <button type="button" class="btn btn-default ml-1 cancel">キャンセル</button>
+      </form>
+    </div>

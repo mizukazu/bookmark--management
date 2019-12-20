@@ -17,6 +17,9 @@
 
   <!-- Custom styles for this template-->
   <link href="css/library/sb-admin-2.min.css" rel="stylesheet">
+  <link href="css/library/modaal.min.css" rel="stylesheet">
+
+  <link href="css/style.css" rel="stylesheet">
 
 </head>
 

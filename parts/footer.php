@@ -31,6 +31,9 @@
   <!-- pagination -->
   <script src="js/library/paginathing.js"></script>
 
+  <!-- modal -->
+  <script src="js/library/modaal.min.js"></script>
+
   <!-- Main JS -->
   <script src="js/main.js"></script>
 

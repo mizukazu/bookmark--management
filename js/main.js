@@ -1,5 +1,20 @@
 $(document).ready(() => {
   navActive();
+
+  $('.import-modal').modaal({
+    content_source: '#import-modal',
+    width: 500
+  });
+
+  $('.export-modal').modaal({
+    content_source: '#export-modal',
+    width: 500
+  });
+
+  $('.cancel').on('click', () => {
+    $('.import-modal').modaal('close');
+    $('.export-modal').modaal('close');
+  })
 });
 
 /**
