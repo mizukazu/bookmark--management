@@ -1,5 +1,5 @@
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
+      <!-- Footer -->
+      <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
             <span>Copyright &copy; お気に入り管理画面 2019 by みずかず</span>
@@ -13,8 +13,8 @@
 
   </div>
   <!-- End of Page Wrapper -->
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
+  <!-- Scroll to Top Button-->
+  <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fa-angle-up"></i>
   </a>
 
