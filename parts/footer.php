@@ -26,10 +26,10 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/sb-admin-2.min.js"></script>
+  <script src="js/library/sb-admin-2.min.js"></script>
 
   <!-- pagination -->
-  <script src="js/paginathing.js"></script>
+  <script src="js/library/paginathing.js"></script>
 
   <!-- Main JS -->
   <script src="js/main.js"></script>
