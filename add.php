@@ -1,9 +1,13 @@
+    <?php require_once('./php/json.php'); ?>
+    
     <!-- Header -->
     <?php require_once('./parts/header.php'); ?>
     <!-- sidebar -->
     <?php require_once('./parts/sidebar.php'); ?>
     <!-- Topbar -->
     <?php require_once('./parts/topbar.php'); ?>
+
+    <?php $url = './file/icon.json'; ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->
@@ -12,7 +16,7 @@
     <!-- Page Heading -->
     <h1 class="h3 mb-4 text-gray-800">新規追加画面</h1>
 
-    <form class="user" action="./php/register.php" method="POST">
+    <form class="user" action="./php/register.php" method="POST" name="form">
       <div class="form-group row">
         <div class="col-sm-6 mb-3 mb-sm-0">
           <input type="text" class="form-control" id="name" name="name" placeholder="サイト名" required>
@@ -30,6 +34,17 @@
     </form>
 
     <?php
+    // データの取得
+    // 作りかけ アイコンをクリックしたらタグに分類を入力する処理を作る
+    $data = get_json($url);
+    echo '<div class="col-lg-5" style="display:flex; justify-content:space-between;">';
+    foreach($data as $d) {
+      echo '<span class="icon">'.$d['src'].'</span>';
+    }
+    echo '</div>';
+    ?>
+
+    <?php
       // エラーメッセージの出力 
       if(isset($_GET['error'])) {
         echo '<p class="mt-2 text-danger" style="font-weight: bold;">';
@@ -41,7 +56,6 @@
         echo $_GET['success'];
         echo '</p>';
       }
-      
     ?>
 
     </div>

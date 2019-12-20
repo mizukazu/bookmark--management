@@ -15,6 +15,11 @@ $(document).ready(() => {
     $('.import-modal').modaal('close');
     $('.export-modal').modaal('close');
   })
+
+  $('.icon').on('click', (ele) => {
+    const className = ele.target.className.split(' ')[1].split('-')[1];
+    document.form.tag.value = classNameConverter(className);
+  });
 });
 
 /**
@@ -27,4 +32,34 @@ function navActive() {
   
   // activeクラスを付与
   $('#' + searchId).addClass('active');
+}
+
+/**
+ * クラス名を変換する関数
+ */
+function classNameConverter(className) {
+  switch(className) {
+    case 'html5':
+      return 'HTML'
+    case 'css3':
+      return 'CSS'
+    case 'js':
+      return 'Javascript';
+    case 'php':
+      return 'PHP';
+    case 'blog':
+      return 'Blog';
+    case 'circle':
+      return 'その他';
+    case 'git':
+      return 'Git';
+    case 'github':
+      return 'Github';
+    case 'laravel':
+      return 'Laravel';
+    case 'wordpress':
+      return 'WordPress';
+    default:
+      break;
+  }
 }
