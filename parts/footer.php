@@ -28,9 +28,6 @@
   <!-- Custom scripts for all pages-->
   <script src="js/library/sb-admin-2.min.js"></script>
 
-  <!-- pagination -->
-  <script src="js/library/paginathing.js"></script>
-
   <!-- modal -->
   <script src="js/library/modaal.min.js"></script>
 
