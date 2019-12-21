@@ -28,7 +28,7 @@ function show_card($data) {
  * 引数のタグからアイコンを検索する関数
  */
 function show_icon($tag) {
-  $icon_json = get_json('./file/icon.json');
+  $icon_json = get_json('./config/icon.json');
 
   $icon = [];
   foreach($icon_json as $i) {
@@ -81,8 +81,4 @@ function create_tag_array($data) {
       return 'エクスポートが完了しました。';
     }
     exit;
-  }
-
-  function export() {
-    echo 'test!';
   }

@@ -8,7 +8,7 @@
     <!-- Topbar -->
     <?php require_once('./parts/topbar.php'); ?>
 
-    <?php $json = get_json('./file/data.json'); ?>
+    <?php $json = get_json('config/data/data.json'); ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->

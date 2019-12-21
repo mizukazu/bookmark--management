@@ -7,7 +7,7 @@
     <!-- Topbar -->
     <?php require_once('./parts/topbar.php'); ?>
 
-    <?php $url = './file/icon.json'; ?>
+    <?php $url = 'config/icon.json'; ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->

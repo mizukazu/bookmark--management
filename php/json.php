@@ -5,10 +5,10 @@
  */
 function get_json($url) {
   $realPath = realpath($url);
-
-  if($json = file_get_contents($realPath)) {
-
-    $json = mb_convert_encoding(file_get_contents($realPath), 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
+  
+  if($json = file_get_contents($url)) {
+    
+    $json = mb_convert_encoding(file_get_contents($url), 'UTF8', 'ASCII,JIS,UTF-8,EUC-JP,SJIS-WIN');
 
     $array = json_decode($json, true);
 

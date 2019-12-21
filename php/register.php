@@ -1,5 +1,5 @@
 <?php
-require_once('vendor/autoload.php');
+require_once('../vendor/autoload.php');
 require_once('../php/json.php');
 
 $v = new Valitron\Validator($_POST);

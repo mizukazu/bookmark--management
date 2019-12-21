@@ -1,0 +1,207 @@
+[
+    {
+        "name": "Drawer公式サイト",
+        "url": "http:\/\/git.blivesta.com\/drawer\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【jQuery】スライダープラグイン「slick」の使い方を詳しく解説",
+        "url": "https:\/\/webdesignday.jp\/inspiration\/technique\/jquery-js\/3847\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "手軽に画像をパララックスエフェクト「simpleParallax」",
+        "url": "https:\/\/sakic.jp\/blog\/web\/simpleparallax",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【JS】「simpleParallax.js」で簡単にパララックス効果を与える",
+        "url": "https:\/\/www.webtan.cc\/wp\/htmlcssjquery-%e3%82%b3%e3%83%bc%e3%83%87%e3%82%a3%e3%83%b3%e3%82%b0\/%e3%80%90js%e3%80%91%e3%80%8csimpleparallax-js%e3%80%8d%e3%81%a7%e7%b0%a1%e5%8d%98%e3%81%ab%e3%83%91%e3%83%a9%e3%83%a9%e3%83%83%e3%82%af%e3%82%b9%e5%8a%b9%e6%9e%9c%e3%82%92%e4%b8%8e%e3%81%88%e3%82%8b\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "jQuery非依存で手軽にパララックス「Rellax.js」",
+        "url": "https:\/\/sakic.jp\/blog\/web\/rellax",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【PHP】連想配列、配列への追加(Qiita)",
+        "url": "https:\/\/qiita.com\/kazu56\/items\/6947a0e4830eb556d575",
+        "tag": "PHP"
+    },
+    {
+        "name": "Font Awesome",
+        "url": "https:\/\/fontawesome.com\/",
+        "tag": "その他"
+    },
+    {
+        "name": "【PHP】フォームバリデーションのライブラリなら、Valitronが便利です",
+        "url": "https:\/\/manablog.org\/php-valitron\/",
+        "tag": "PHP"
+    },
+    {
+        "name": "【PHP】複数の配列を同時にwhileで回す",
+        "url": "https:\/\/qiita.com\/KOH_TA\/items\/c69b0fce9da1b114fef9",
+        "tag": "PHP"
+    },
+    {
+        "name": "【jQuery】クリックで状態が切り替わるボタンを実装する【初心者向け】",
+        "url": "https:\/\/macoblog.com\/jquery_click_active\/",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "【PHP】file_get_contents関数を使うときのエラー処理の方法",
+        "url": "https:\/\/ysklog.net\/php\/2370.html",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP で URL パラメーターから値を取得する方法",
+        "url": "https:\/\/hirashimatakumi.com\/blog\/311.html",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP ヒアドキュメントの使いかた",
+        "url": "https:\/\/qiita.com\/39_isao\/items\/8987fd62cf0e50c3be39",
+        "tag": "PHP"
+    },
+    {
+        "name": "Thought is free",
+        "url": "https:\/\/thk.kanzae.net\/",
+        "tag": "Blog"
+    },
+    {
+        "name": "【css】要素をposition:absoluteで中央に配置する最新の方法(上下左右、上下、左右)",
+        "url": "https:\/\/arts-factory.net\/position\/",
+        "tag": "CSS"
+    },
+    {
+        "name": "CSSのposition: absoluteとrelativeとは",
+        "url": "https:\/\/uxmilk.jp\/63409",
+        "tag": "CSS"
+    },
+    {
+        "name": "☘️だいたい楽しい☘️",
+        "url": "https:\/\/soramugi.wordpress.com\/",
+        "tag": "Blog"
+    },
+    {
+        "name": "VSCodeでのGitの基本操作まとめ",
+        "url": "https:\/\/qiita.com\/y-tsutsu\/items\/2ba96b16b220fb5913be",
+        "tag": "GitHub"
+    },
+    {
+        "name": "【初心者向け】Gitのインストール方法をわかり易く解説（画面付き）",
+        "url": "https:\/\/eng-entrance.com\/git-install",
+        "tag": "Git"
+    },
+    {
+        "name": "gitignoreの書き方チートシート【テンプレあり】",
+        "url": "https:\/\/wiseloan-cash.com\/gitignore\/",
+        "tag": "Git"
+    },
+    {
+        "name": "VSCodeの機能で最低限必要なGit操作をしたい！",
+        "url": "https:\/\/qiita.com\/mnao305\/items\/b3c5f5943066a0bb8e2e",
+        "tag": "Git"
+    },
+    {
+        "name": "PHPで配列操作を行う関数まとめ",
+        "url": "https:\/\/www.ritolab.com\/entry\/155",
+        "tag": "PHP"
+    },
+    {
+        "name": "phpのページングは難しくない!シンプルに覚えるサンプル付き解説",
+        "url": "https:\/\/www.sejuku.net\/blog\/70234",
+        "tag": "PHP"
+    },
+    {
+        "name": "クラスの基礎",
+        "url": "https:\/\/www.php.net\/manual\/ja\/language.oop5.basic.php",
+        "tag": "PHP"
+    },
+    {
+        "name": "[PHP] ページング機能の仕組みとか作り方とか",
+        "url": "https:\/\/tenderfeel.xsrv.jp\/php\/639\/[PHP] ページング機能の仕組みとか作り方とか",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP：配列の添え字番号を振り直す方法",
+        "url": "https:\/\/teratail.com\/questions\/4468",
+        "tag": "PHP"
+    },
+    {
+        "name": ".gitignore の書き方。ファイル\/ディレクトリの除外と反映方法",
+        "url": "http:\/\/www-creators.com\/archives\/1662",
+        "tag": "Git"
+    },
+    {
+        "name": "CentOS7にLaravel5.3のインストールとWelcomeページ表示",
+        "url": "https:\/\/owani.net\/php\/laravel5-composer\/593\/",
+        "tag": "Laravel"
+    },
+    {
+        "name": "[Laravel]エラー\"No application encryption key has been specified.\"が出るとき",
+        "url": "https:\/\/akamist.com\/blog\/archives\/2178",
+        "tag": "Laravel"
+    },
+    {
+        "name": "Gitのコミットメッセージの書き方",
+        "url": "https:\/\/qiita.com\/itosho\/items\/9565c6ad2ffc24c09364",
+        "tag": "Git"
+    },
+    {
+        "name": "【php】ちょっとしたphpをコマンドラインからさくっと実行する",
+        "url": "https:\/\/www.softel.co.jp\/blogs\/tech\/archives\/2077",
+        "tag": "PHP"
+    },
+    {
+        "name": "【Laravel】わりとよく使うArtisanコマンド集",
+        "url": "https:\/\/qiita.com\/sola-msr\/items\/a09b857c5e7f7c88d01d",
+        "tag": "Laravel"
+    },
+    {
+        "name": "Laravel6.0「make:Auth」が無くなった 〜Laravel6.0でのLogin機能の実装方法〜MyMemo",
+        "url": "https:\/\/qiita.com\/daisu_yamazaki\/items\/a914a16ca1640334d7a5",
+        "tag": "Laravel"
+    },
+    {
+        "name": "Laravel 6.0 ログイン機能を実装する",
+        "url": "https:\/\/qiita.com\/ucan-lab\/items\/bd0d6f6449602072cb87",
+        "tag": "Laravel"
+    },
+    {
+        "name": "HerokuでLaravelアプリを動かすときの注意点5つ",
+        "url": "https:\/\/www.hypertextcandy.com\/heroku-laravel-gotchas",
+        "tag": "Laravel"
+    },
+    {
+        "name": "HypertextCandy",
+        "url": "https:\/\/www.hypertextcandy.com\/",
+        "tag": "Blog"
+    },
+    {
+        "name": "うえぶはっく",
+        "url": "http:\/\/webhacck.net\/archives\/cat_11382.html",
+        "tag": "Blog"
+    },
+    {
+        "name": "JavaScript テキストボックスの値を取得\/設定する",
+        "url": "https:\/\/itsakura.com\/js-textbox",
+        "tag": "JavaScript"
+    },
+    {
+        "name": "$_GET, $_POSTなどを受け取る際の処理",
+        "url": "https:\/\/qiita.com\/mpyw\/items\/2f9955db1c02eeef43ea",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHP開発者が心得ておくべき10の鉄則",
+        "url": "https:\/\/qiita.com\/ka215\/items\/c4bda101e51b7fe82ab2",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHPでデータベースに接続するときのまとめ",
+        "url": "https:\/\/qiita.com\/mpyw\/items\/b00b72c5c95aac573b71",
+        "tag": "PHP"
+    }
+]

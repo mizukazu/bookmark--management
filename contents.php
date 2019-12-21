@@ -1,10 +1,9 @@
 <?php require_once('./php/json.php'); ?>
-<?php require_once('./php/class.pagination.php'); ?>
 <?php require_once('./php/functions.php'); ?>
 <?php require_once('./parts/header.php'); ?>
 <?php require_once('./parts/sidebar.php'); ?> 
 <?php require_once('./parts/topbar.php'); ?> 
-<?php $url = './file/data.json'; ?>
+<?php $url = 'config/data/data.json'; ?>
 <?php
 // データの取得
 $data = get_json($url);
