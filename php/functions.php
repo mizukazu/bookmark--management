@@ -28,7 +28,7 @@ function show_card($data) {
  * 引数のタグからアイコンを検索する関数
  */
 function show_icon($tag) {
-  $icon_json = get_json('./config/icon.json');
+  $icon_json = get_json('./config/icon/icon.json');
 
   $icon = [];
   foreach($icon_json as $i) {

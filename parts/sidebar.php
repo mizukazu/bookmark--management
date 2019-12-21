@@ -1,5 +1,5 @@
 <?php require_once('./php/json.php'); ?>
-<?php $url = './config/icon.json'; ?>
+<?php $url = './config/icon/icon.json'; ?>
 <?php
 // データの取得
 $data = get_json($url);
