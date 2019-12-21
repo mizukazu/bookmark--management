@@ -1,13 +1,12 @@
-    <?php require_once('./php/json.php'); ?>
+    <?php require_once(__DIR__ . '/config/config.php'); ?>
+    <?php require_once(__DIR__ . '/php/json.php'); ?>
     
     <!-- Header -->
-    <?php require_once('./parts/header.php'); ?>
+    <?php require_once(__DIR__ . '/parts/header.php'); ?>
     <!-- sidebar -->
-    <?php require_once('./parts/sidebar.php'); ?>
+    <?php require_once(__DIR__ . '/parts/sidebar.php'); ?>
     <!-- Topbar -->
-    <?php require_once('./parts/topbar.php'); ?>
-
-    <?php $url = 'config/icon/icon.json'; ?>
+    <?php require_once(__DIR__ . '/parts/topbar.php'); ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->
@@ -35,7 +34,7 @@
     <hr>
 
     <?php
-    $data = get_json($url);
+    $data = get_json(Config::$config['url']['icon_url']);
     echo '<div class="col-lg-5 mb-2 d-none d-lg-flex" style="display:flex; justify-content:space-between;">';
     foreach($data as $d) {
       echo '<span class="icon">'.$d['src'].'</span>';

@@ -1,6 +1,7 @@
 <?php
 require_once('../vendor/autoload.php');
 require_once('../php/json.php');
+require_once('../config/config.php');
 
 $v = new Valitron\Validator($_POST);
 
@@ -9,7 +10,7 @@ $v->rule('required', ['name', 'url', 'tag'])->message('{field}は必須です。
 
 if($v->validate()) {
 
-  $url     = '../file/data.json';
+  $url     = Config::$config['url']['data_url'];
   $json    = get_json($url);
   $success = '';
   $error   = '';

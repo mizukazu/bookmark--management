@@ -1,14 +1,15 @@
-    <?php require_once('./php/json.php'); ?>
-    <?php require_once('./php/functions.php'); ?>
+    <?php require_once(__DIR__ . '/php/json.php'); ?>
+    <?php require_once(__DIR__ . '/php/functions.php'); ?>
+    <?php require_once(__DIR__ . '/config/config.php'); ?>
 
     <!-- Header -->
-    <?php require_once('./parts/header.php'); ?>
+    <?php require_once(__DIR__ . '/parts/header.php'); ?>
     <!-- sidebar -->
-    <?php require_once('./parts/sidebar.php'); ?>
+    <?php require_once(__DIR__ . '/parts/sidebar.php'); ?>
     <!-- Topbar -->
-    <?php require_once('./parts/topbar.php'); ?>
+    <?php require_once(__DIR__ . '/parts/topbar.php'); ?>
 
-    <?php $json = get_json('config/data/data.json'); ?>
+    <?php $json = get_json(Config::$config['url']['data_url']); ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->

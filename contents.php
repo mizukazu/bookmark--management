@@ -1,12 +1,14 @@
-<?php require_once('./php/json.php'); ?>
-<?php require_once('./php/functions.php'); ?>
-<?php require_once('./parts/header.php'); ?>
-<?php require_once('./parts/sidebar.php'); ?> 
-<?php require_once('./parts/topbar.php'); ?> 
-<?php $url = 'config/data/data.json'; ?>
+<?php require_once(__DIR__ . '/config/config.php'); ?>
+<?php require_once(__DIR__ . '/php/json.php'); ?>
+<?php require_once(__DIR__ . '/php/functions.php'); ?>
+
+<?php require_once(__DIR__ . '/parts/header.php'); ?>
+<?php require_once(__DIR__ . '/parts/sidebar.php'); ?> 
+<?php require_once(__DIR__ . '/parts/topbar.php'); ?> 
+
 <?php
 // データの取得
-$data = get_json($url);
+$data = get_json(Config::$config['url']['data_url']);
 
 // ページ番号の取得
 if(!isset($_GET['page'])) {

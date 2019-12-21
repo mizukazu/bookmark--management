@@ -1,8 +1,9 @@
 <?php require_once('./php/json.php'); ?>
-<?php $url = './config/icon/icon.json'; ?>
+<?php require_once('./config/config.php'); ?>
+
 <?php
 // データの取得
-$data = get_json($url);
+$data = get_json(Config::$config['url']['icon_url']);
 ?>
 
 

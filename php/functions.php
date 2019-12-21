@@ -1,5 +1,5 @@
 <?php
-require_once('json.php');
+require_once(__DIR__ . '/json.php');
 
 /**
  * 管理画面に表示するカードを作成する関数
