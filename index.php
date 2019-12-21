@@ -53,14 +53,15 @@
       </div>
       <hr>
       <div class="row">
-        <form class="col-lg-6" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
-          <button id="import-btn" class="btn btn-primary col-lg-3 mb-2 import-modal" name="data" value="import">インポート</button>
-          <button id='export-btn' class="btn btn-primary col-lg-3 export-modal" name="data" value="export">エクスポート</button>
+        <form class="col-lg-6 d-none d-lg-flex" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
+          <button id="import-btn" class="btn btn-primary col-lg-4 mb-2 import-modal" name="data" value="import">インポート</button>
+          <button id='export-btn' class="btn btn-primary col-lg-4 export-modal" name="data" value="export">エクスポート</button>
         </form>
       </div>
       <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
+
 
     </div>
     <!-- End of Main Content -->

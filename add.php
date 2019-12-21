@@ -36,14 +36,13 @@
 
     <?php
     $data = get_json($url);
-    echo '<div class="col-lg-5 mb-2" style="display:flex; justify-content:space-between;">';
+    echo '<div class="col-lg-5 mb-2 d-none d-lg-flex" style="display:flex; justify-content:space-between;">';
     foreach($data as $d) {
       echo '<span class="icon">'.$d['src'].'</span>';
     }
     echo '</div>';
+    echo '<div class="d-none d-lg-flex">タグアイコンをクリックするとタグ名を自動入力する事が出来ます。</div>';
     ?>
-
-    <div>タグアイコンをクリックするとタグ名を自動入力する事が出来ます。</div>
 
     <?php
       // エラーメッセージの出力 
