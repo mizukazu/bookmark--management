@@ -50,35 +50,63 @@ function create_tag_array($data) {
   return $tag;
 }
 
-  /**
-   * ファイルのダウンロードを行う関数
-   * @param $path
-   * @param $mime_type
-   */
-  function download($path, $mime_type = null) {
-    // ファイルが読めなかったら処理を終了させる
-    if(!is_readable($path)) { die($path . 'を読み込めませんでした。'); }
-
-    if(isset($mime_type)) {
-      $mime = $mime_type;
-    } else {
-      $mime = (new finfo(FILEINFO_MIME_TYPE))->file($path);
-    }
-
-    if(!preg_match('/\A\S+?\/\S+/', $mime)) {
-      $mime = 'application/octet-stream';
-    }
-
-    header('Conten-Type:' . $mime);
-    header('X-Content-Type-Options: nosniff');
-    header('Content-Disposition: attachment; filename="'.basename($path).'"');
-    header('Cnnection: close');
-
-    while(ob_get_level()) { ob_end_clean(); }
-
-    // ファイルのダウンロード後にファイルを削除する
-    if(readfile($path) > 0) {
-      return 'エクスポートが完了しました。';
-    }
-    exit;
+/**
+ * ファイルのインポートを行う関数
+ */
+function import($tmp, $src) {
+  $path_info = pathinfo($src);
+  // JSONファイル以外のファイルが送信されたときにはリダイレクト
+  if($path_info['extension'] != 'json') {
+    $error = 'JSON形式のファイルのみ送信することが出来ます。';
+    header('location: ../index.php?error='.$error);
+    return;
   }
+
+  $split = explode('.', $path_info['basename']);
+  // ファイル名にタイムスタンプを付ける
+  $src = $path_info['dirname'] . '/' . $split[0] . '_' . time() . '.' . $split[1];
+
+  if(is_uploaded_file($tmp)) {
+    if(move_uploaded_file($tmp, $src)) {
+      $success =  'インポートが完了しました。';
+      header('location: ../index.php?success='.$success);
+    } else {
+      $error = 'ファイルのインポートに失敗しました。';
+      header('location: ../index.php?error='.$error);
+    }
+  } else {
+      $error = '不正な操作です。';
+      header('location: ../index.php?error='.$error);
+  }
+}
+
+/**
+ * ファイルのダウンロードを行う関数
+ */
+function export($path, $mime_type = null) {
+  // ファイルが読めなかったら処理を終了させる
+  if(!is_readable($path)) { die($path . 'を読み込めませんでした。'); }
+
+  if(isset($mime_type)) {
+    $mime = $mime_type;
+  } else {
+    $mime = (new finfo(FILEINFO_MIME_TYPE))->file($path);
+  }
+
+  if(!preg_match('/\A\S+?\/\S+/', $mime)) {
+    $mime = 'application/octet-stream';
+  }
+
+  header('Conten-Type:' . $mime);
+  header('X-Content-Type-Options: nosniff');
+  header('Content-Disposition: attachment; filename="'.basename($path).'"');
+  header('Cnnection: close');
+
+  while(ob_get_level()) { ob_end_clean(); }
+
+  // ファイルのダウンロード後にファイルを削除する
+  if(readfile($path) > 0) {
+    return 'エクスポートが完了しました。';
+  }
+  exit;
+}

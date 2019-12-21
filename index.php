@@ -59,6 +59,17 @@
           <button id='export-btn' class="btn btn-primary col-lg-4 export-modal" name="data" value="export">エクスポート</button>
         </form>
       </div>
+      <?php
+      if(isset($_GET['success'])) {
+      echo '<p class="mt-3">'.$_GET['success'].'</>';
+      }
+      if(isset($_GET['error'])) {
+      echo '<h2 class="mt-3">エラー</h2>';
+      echo '<p class="text-danger" style="font-weight: 700;">';
+      echo '※'.$_GET['error'];
+      echo '</p>';
+      }
+      ?>
       <!-- /.row -->
     </div>
     <!-- /.container-fluid -->
@@ -77,8 +88,11 @@
         指定のJSON形式のファイルを選択してください。
       </p>
       <hr>
-      <form action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
-        <input type="file">
+      <form action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;" enctype="multipart/form-data">
+        <div class="custom-file">
+          <input type="file" class="custom-file-input" id="customFile" name='file' required>
+          <label class="custom-file-label" for="customFile">ファイルを選択</label>
+        </div>
         <div class="mt-3" style="display:flex; justify-content:center;">
           <button type="submit" class="btn btn-primary mr-1" name="data" value="import">インポート</button>
           <button type="button" class="btn btn-default ml-1 cancel">キャンセル</button>

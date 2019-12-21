@@ -2,11 +2,14 @@
 <?php require_once('../config/config.php'); ?>
 
 <?php
+$tmp = $_FILES['file']['tmp_name'];
+$src = '../config/data/'.$_FILES['file']['name'];
+
 // データのダウンロード処理
 if(isset($_POST['data']) && $_POST['data'] === 'export') {
-  download(Config::$config['url']['data_url']);
+  export(Config::$config['url']['data_url']);
 } elseif(isset($_POST['data']) && $_POST['data'] === 'import') {
-  import();
+  import($tmp, $src);
 } else {
   header('location: ../index.php');
 }

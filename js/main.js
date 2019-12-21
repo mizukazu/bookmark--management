@@ -1,5 +1,6 @@
 $(document).ready(() => {
-
+  bsCustomFileInput.init()
+  
   $('.import-modal').modaal({
     content_source: '#import-modal',
     width: 500

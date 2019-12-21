@@ -28,8 +28,11 @@
   <!-- Custom scripts for all pages-->
   <script src="js/library/sb-admin-2.min.js"></script>
 
-  <!-- modal -->
+  <!-- Modal -->
   <script src="js/library/modaal.min.js"></script>
+
+  <!-- Custom File -->
+  <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 
   <!-- Main JS -->
   <script src="js/main.js"></script>
