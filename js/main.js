@@ -1,5 +1,7 @@
 $(document).ready(() => {
   bsCustomFileInput.init()
+
+  $('[data-toggle="tooltip"]').tooltip();
   
   $('.import-modal').modaal({
     content_source: '#import-modal',
@@ -20,6 +22,7 @@ $(document).ready(() => {
     const className = ele.target.className.split(' ')[1].split('-')[1];
     document.form.tag.value = classNameConverter(className);
   });
+
 });
 
 

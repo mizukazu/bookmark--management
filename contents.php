@@ -8,7 +8,7 @@
 
 <?php
 // データの取得
-$data = get_json(Config::$config['url']['data_url']);
+$data = get_json(Config::getFirstDataUrl());
 
 // ページ番号の取得
 if(!isset($_GET['page'])) {

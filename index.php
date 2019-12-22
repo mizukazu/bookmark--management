@@ -9,15 +9,14 @@
     <!-- Topbar -->
     <?php require_once(__DIR__ . '/parts/topbar.php'); ?>
 
-    <?php $json = get_json(Config::$config['url']['data_url']); ?>
+    <?php $json = get_json(Config::getFirstDataUrl()); ?>
 
     <!-- Contents -->
     <!-- Begin Page Content -->
     <div class="container-fluid">
 
       <!-- Page Heading -->
-      <h1 class="h3 mb-4 text-gray-800">管理画面</h1>
-
+      <h1 class="h3 mb-4 text-gray-800">管理画面<i class="fas fa-question-circle ml-1 d-none d-lg-inline" style="font-size:0.6em;" data-toggle="tooltip" data-placement="right" title="管理画面ではツールのデータの確認や各種設定を行う事が出来ます。"></i></h1>
       <div class="row">
 
         <div class="col-lg-3">
@@ -52,11 +51,30 @@
           </div>
         </div>
       </div>
-      <hr>
+      <!-- <hr>
+      <h2 class="h3 mb-4 text-gray-800">設定</h2>
       <div class="row">
-        <form class="col-lg-6 d-none d-lg-flex" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
-          <button id="import-btn" class="btn btn-primary col-lg-4 mb-2 import-modal" name="data" value="import">インポート</button>
-          <button id='export-btn' class="btn btn-primary col-lg-4 export-modal" name="data" value="export">エクスポート</button>
+      </div> -->
+      <hr>
+      <h2 class="h3 mb-4 text-gray-800">データの設定<i class="fas fa-question-circle ml-1 d-none d-lg-inline" style="font-size:0.6em;" data-toggle="tooltip" data-placement="right" title="データの確認や設定を行う事が出来ます。"></i></h2>
+      <div class="row">
+      <div class="col-lg-5">
+          <h3 class="h5 mb-4 text-gray-800">現在インポートされているデータ</h3>
+          <select class="col-lg-5">
+            <?php
+            foreach(Config::$config['url']['data_url'] as $data) {
+              echo '<option>'.basename($data).'</option>';
+            }
+            ?>
+          </select>
+        </div>
+        <form class="col-lg-2 offset-5 d-none d-lg-flex" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
+          <div class="row">
+            <label>データの取り込み</label>
+            <button id="import-btn" class="btn btn-primary col-lg-12 mb-2 import-modal" name="data" value="import">インポート</button>
+            <label>データの出力</label>
+            <button id="export-btn" class="btn btn-primary col-lg-12 export-modal" name="data" value="export">エクスポート</button>
+          </div>
         </form>
       </div>
       <?php

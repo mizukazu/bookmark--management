@@ -29,3 +29,14 @@
 .icon {
   cursor: pointer;
 }
+
+.fa-question-circle {
+  &:hover {
+    opacity: 0.8;
+    color: #7fbfff;
+  }
+}
+
+.help-message {
+  display: none;
+}
