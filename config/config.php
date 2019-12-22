@@ -8,6 +8,10 @@ class Config {
   public static function init() {
     self::getConfig();
   }
+
+  public static function getFirstDataUrl() {
+    return self::$config['url']['data_url'][0];
+  }
   /**
    * 設定ファイルを読み込むメソッド
    */
