@@ -80,16 +80,6 @@ $data = get_json(Config::$config['url']['icon_url']);
     <span>新規追加</span></a>
 </li>
 
-<!-- Divider -->
-<!-- <hr class="sidebar-divider d-none d-md-block mb-0"> -->
-
-<!-- Nav Item - 設定 -->
-<!-- <li id="config" class="nav-item">
-  <a class="nav-link" id="config" href="add.php">
-    <i class="fas fa-fw fa-cog"></i>
-    <span>設定</span></a>
-</li> -->
-
 <!-- Sidebar Toggler (Sidebar) -->
 <div class="text-center d-none d-md-inline">
   <button class="rounded-circle border-0" id="sidebarToggle"></button>
