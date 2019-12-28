@@ -65,7 +65,7 @@ $data = get_json(Config::$config['url']['icon_url']);
 
 <!-- Nav Item - その他 -->
 <li id="other" class="nav-item">
-  <a class="nav-link" href="contents.php?tag=">
+  <a class="nav-link" href="contents.php?tag=その他">
     <i class="fas fa-fw fa-folder"></i>
     <span>その他</span></a>
 </li>

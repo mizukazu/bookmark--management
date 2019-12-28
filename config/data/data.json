@@ -203,5 +203,25 @@
         "name": "PHPでデータベースに接続するときのまとめ",
         "url": "https:\/\/qiita.com\/mpyw\/items\/b00b72c5c95aac573b71",
         "tag": "PHP"
+    },
+    {
+        "name": "PHP関数 - 文字列をファイルに書き込む - file_put_contents() - PHP入門のカルマ",
+        "url": "https:\/\/webkaru.net\/php\/function-file-put-contents\/",
+        "tag": "PHP"
+    },
+    {
+        "name": "【php】json_encodeで整形して出力する方法メモ - とりあえずphpとか",
+        "url": "http:\/\/kimagureneet.hatenablog.com\/entry\/2016\/06\/11\/004356",
+        "tag": "PHP"
+    },
+    {
+        "name": "PHPファイル操作機能一覧 - Qiita",
+        "url": "https:\/\/qiita.com\/tadsan\/items\/0955b3de7dc58490ddaf",
+        "tag": "PHP"
+    },
+    {
+        "name": "デザインをセンスアップする“いけてる配色パターン”100選！",
+        "url": "https:\/\/www.canva.com\/ja_jp\/learn\/100-color-combinations\/",
+        "tag": "その他"
     }
 ]
