@@ -2,6 +2,7 @@
 
 /**
  * JSONデータを読み込む関数
+ * @param $url
  */
 function get_json($url) {
   $realPath = realpath($url);
