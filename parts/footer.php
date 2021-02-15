@@ -26,16 +26,16 @@
   <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
   <!-- Custom scripts for all pages-->
-  <script src="js/library/sb-admin-2.min.js"></script>
+  <script src="assets/js/library/sb-admin-2.min.js"></script>
 
   <!-- Modal -->
-  <script src="js/library/modaal.min.js"></script>
+  <script src="assets/js/library/modaal.min.js"></script>
 
   <!-- Custom File -->
   <script src="https://cdn.jsdelivr.net/npm/bs-custom-file-input/dist/bs-custom-file-input.min.js"></script>
 
   <!-- Main JS -->
-  <script src="js/main.js"></script>
+  <script src="assets/js/main.js"></script>
 
 </body>
 
