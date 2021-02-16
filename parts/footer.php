@@ -2,7 +2,7 @@
       <footer class="sticky-footer bg-white">
         <div class="container my-auto">
           <div class="copyright text-center my-auto">
-            <span>Copyright &copy; お気に入り管理画面 2019 by みずかず</span>
+            <span>Copyright &copy; お気に入り管理画面 <?php echo date('Y'); ?> by みずかず</span>
           </div>
         </div>
       </footer>
