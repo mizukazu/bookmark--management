@@ -84,14 +84,14 @@ $end   = $now_page * $per_page;
                           if($count < $per_page) {
                             for($i=0; $i<$count; $i++) {
                             echo '<tr>
-                                    <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                    <td><a href="'. $data[$i]['url'] .'" target="_blank">'. $data[$i]['name'] .'</a></td>
                                     <td>'. $data[$i]['tag'] .'</td>
                                   </tr>';
                             }
                           } else {
                             for($i=0; $i<$per_page; $i++) {                     
                               echo '<tr>
-                                      <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                      <td><a href="'. $data[$i]['url'] .'" target="_blank">'. $data[$i]['name'] .'</a></td>
                                       <td>'. $data[$i]['tag'] .'</td>
                                     </tr>';
                             }
@@ -102,7 +102,7 @@ $end   = $now_page * $per_page;
                             // データが空でない場合
                             if(!empty($data[$i])) {                   
                               echo '<tr>
-                                      <td><a href="'. $data[$i]['url'] .'">'. $data[$i]['name'] .'</a></td>
+                                      <td><a href="'. $data[$i]['url'] .'" target="_blank">'. $data[$i]['name'] .'</a></td>
                                       <td>'. $data[$i]['tag'] .'</td>
                                     </tr>';
                             }
