@@ -5,6 +5,9 @@
  * @param $url
  */
 function get_json($url) {
+  // echo 'get_json()が呼ばれました<br>';
+  // echo $url;
+
   $realPath = realpath($url);
   
   if($json = file_get_contents($url)) {

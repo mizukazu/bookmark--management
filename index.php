@@ -11,6 +11,7 @@
 
     <?php $json = get_json(Config::getFirstDataUrl()); ?>
 
+
     <!-- Contents -->
     <!-- Begin Page Content -->
     <div class="container-fluid">
@@ -62,18 +63,18 @@
           <h3 class="h5 mb-4 text-gray-800">現在インポートされているデータ</h3>
           <select class="col-lg-5">
             <?php
-            foreach(Config::$config['url']['data_url'] as $data) {
-              echo '<option>'.basename($data).'</option>';
-            }
+            // foreach(Config::$config['url']['data_url'] as $data) {
+            //   echo '<option>'.basename($data).'</option>';
+            // }
             ?>
           </select>
         </div>
         <form class="col-lg-2 offset-5 d-none d-lg-flex" action="php/data_process.php" method="POST" style="display:flex; flex-direction:column;">
           <div class="row">
             <label>データの取り込み</label>
-            <button id="import-btn" class="btn btn-primary col-lg-12 mb-2 import-modal" name="data" value="import">インポート</button>
+            <button id="import-btn" class="btn btn-primary col-lg-12 mb-2 import-modal" name="data" value="import" disabled>インポート</button>
             <label>データの出力</label>
-            <button id="export-btn" class="btn btn-primary col-lg-12 export-modal" name="data" value="export">エクスポート</button>
+            <button id="export-btn" class="btn btn-primary col-lg-12 export-modal" name="data" value="export" disabled>エクスポート</button>
           </div>
         </form>
       </div>

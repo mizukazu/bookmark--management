@@ -34,7 +34,7 @@
     <hr>
 
     <?php
-    $data = get_json(Config::$config['url']['icon_url']);
+    $data = get_json(Config::$icon_url);
     echo '<div class="col-lg-5 mb-2 d-none d-lg-flex" style="display:flex; justify-content:space-between;">';
     foreach($data as $d) {
       echo '<span class="icon">'.$d['src'].'</span>';

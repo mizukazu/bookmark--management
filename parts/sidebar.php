@@ -3,7 +3,8 @@
 
 <?php
 // データの取得
-$data = get_json(Config::$config['url']['icon_url']);
+// $data = get_json(Config::$config['url']['icon_url']);
+$data = get_json(Config::$icon_url);
 ?>
 
 

@@ -7,7 +7,7 @@ $src = '../config/data/'.$_FILES['file']['name'];
 
 // データのダウンロード処理
 if(isset($_POST['data']) && $_POST['data'] === 'export') {
-  export(Config::$config['url']['data_url']);
+  export(Config::$data_url);
 } elseif(isset($_POST['data']) && $_POST['data'] === 'import') {
   import($tmp, $src);
 } else {

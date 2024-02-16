@@ -1,6 +1,8 @@
 <?php
 class Config {
   public static $config;
+  public static $data_url = __DIR__ . '/data/data.json';
+  public static $icon_url = __DIR__ . '/icon/icon.json';
 
   /**
    * 初期化処理
@@ -10,7 +12,8 @@ class Config {
   }
 
   public static function getFirstDataUrl() {
-    return self::$config['url']['data_url'][0];
+    // return self::$config['url']['data_url'][0];
+    return self::$data_url;
   }
   /**
    * 設定ファイルを読み込むメソッド
